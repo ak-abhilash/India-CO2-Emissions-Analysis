@@ -1,0 +1,67 @@
+------------------------------------------------------------------------
+
+Title: 'Regression Analysis: Predicting CO2 Emissions based on GDP'
+
+Author: "Abhilash"
+
+Date: "2023-08-28"
+
+Output: html_document
+
+**CO2 Emissions Prediction based on GDP:**
+
+Call: lm(formula = co2_data \~ X)
+
+Residuals: Min 1Q Median 3Q Max Coefficients: (1 not defined because of singularities) Estimate Std. Error t value Pr(\>\|t\|)\
+
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 84.56 on 22 degrees of freedom Multiple R-squared: 0.9789, Adjusted R-squared: 0.9779 F-statistic: 1021 on 1 and 22 DF, p-value: \< 2.2e-16
+
+**GDP Prediction based on CO2 Emissions:**
+
+Call: lm(formula = gdp_data \~ X)
+
+Residuals: Min 1Q Median 3Q Max -242.69 -59.79 -15.83 84.76 311.14
+
+Coefficients: (1 not defined because of singularities) Estimate Std. Error t value Pr(\>\|t\|)\
+(Intercept) -860.61851 75.82136 -11.35 1.15e-10 ***X NA NA NA NA\
+Xco2_data 1.46357 0.04581 31.95 \< 2e-16*** --- Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 125.1 on 22 degrees of freedom Multiple R-squared: 0.9789, Adjusted R-squared: 0.9779 F-statistic: 1021 on 1 and 22 DF, p-value: \< 2.2e-16
+
+## Explanation
+
+In this report, regression analysis to predict CO2 emissions based on GDP and predict GDP based on CO2 emissions using linear regression models was conducted. Below are the summaries of the regression models along with explanations.
+
+## CO2 Emissions Prediction based on GDP
+
+The regression analysis between CO2 emissions and GDP reveals the following insights:
+
+```         
+The coefficient for 'gdp_data' is approximately 0.66884. This implies that for every unit increase in GDP, we expect an increase of about 0.66884 units in CO2 emissions, keeping other factors constant.
+
+The intercept term is 608.50303. This is the estimated CO2 emissions when the GDP is zero. However, since GDP cannot be zero, this interpretation is not practically meaningful.
+
+The p-value for 'gdp_data' is < 2e-16, which is highly significant. This indicates that the relationship between CO2 emissions and GDP is statistically significant.
+
+The R-squared value of 0.9789 suggests that the model explains about 97.89% of the variance in CO2 emissions based on GDP.
+```
+
+## GDP Prediction based on CO2 Emissions
+
+The regression analysis between GDP and CO2 emissions shows the following key points:
+
+```         
+The coefficient for 'co2_data' is approximately 1.46357. This implies that for every unit increase in CO2 emissions, we expect an increase of about 1.46357 units in GDP, keeping other factors constant.
+
+The intercept term is -860.61851. This is the estimated GDP when CO2 emissions are zero. However, interpreting this value might not be practically meaningful.
+
+The p-value for 'co2_data' is < 2e-16, indicating a highly significant relationship between GDP and CO2 emissions.
+
+The R-squared value of 0.9789 suggests that the model explains about 97.89% of the variance in GDP based on CO2 emissions.
+```
+
+## Conclusion
+
+The regression analysis provides strong evidence of a significant relationship between CO2 emissions and GDP in both directions. The coefficients and statistical significance indicate that changes in one variable are associated with predictable changes in the other variable. However, further analysis and considerations are necessary before drawing any causal conclusions.
